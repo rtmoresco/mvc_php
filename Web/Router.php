@@ -10,7 +10,7 @@ class Router{
 	function __construct()
 	{
 		$this->initRoutes();
-		$this->sendAction_Controller($this->getCurrentUrl())
+		$this->sendAction_Controller($this->getCurrentUrl());
 	}
 
 	function initRoutes(){
@@ -41,8 +41,15 @@ class Router{
 	function sendAction_Controller($url){
 		foreach ($this->getRoutes() as $key => $route) {
 			if($url == $route["route"]){
+				
+				$Class = $this->getPathController($route["controller"]);
 
-				echo $route["action"];
+				$controller = new $Class;
+
+				$action = $route["action"];
+
+				$controller->$action();
+
 			}
 		}
 	}
@@ -52,7 +59,7 @@ class Router{
 	}
 
 	function getPathController($controller = CONTROLLER_DEFAULT){
-		return "App"
+		return "Raiz\\Controller\\".ucfirst($controller);
 	}
 
 	
