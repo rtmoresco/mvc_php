@@ -2,14 +2,28 @@
 
 namespace Raiz\Controller;
 
+use Raiz\Model\Info;
+use Raiz\Model\Produto;
+use system\database\DB;
+
 class IndexController{
 
-	function index(){
-		echo "Esta é a função do index";
+	public function index(){
+		$connection = DB::getConection();
+		$produtoModel = new Produto($connection);
+
+		echo "<pre>";
+		print_r($produtoModel->getProduto());
+		echo "<pre/>";
 	}
 
-	function sobre_nos(){
-		echo "Esta é a função do sobre nós";
+	public function sobre_nos(){
+		$connection = DB::getConection();
+		$infoModel = new Info($connection);
+		echo "<pre>";
+		print_r($infoModel->getInfo());
+		echo "<pre/>";
+
 	}
 }
 
