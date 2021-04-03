@@ -7,7 +7,7 @@ class Router{
 	private $routes;
 	private const CONTROLLER_DEFAULT = "indexController";
 
-	function __construct()
+	public function __construct()
 	{
 		$this->initRoutes();
 		$this->sendAction_Controller($this->getCurrentUrl());
