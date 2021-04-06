@@ -30,7 +30,7 @@ e a produtividade do software.
 
 <h2> Interação das entidades</h2>
 
-<img src="imagem/Modelo.jpg" alt="Modelo MVC" width="500" height="500"/>
+<img src="imagem/Modelo.jpg" alt="Modelo MVC" width="800" height="800"/>
 <p>Imagem ilustrativa demonstrando o comportamento deste projeto.</p>
 
 <h2> Como usar</h2>
