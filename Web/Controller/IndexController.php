@@ -5,32 +5,27 @@ namespace Raiz\Controller;
 use Raiz\Model\Info;
 use Raiz\Model\Produto;
 
-use system\database\DB;
 use system\template\Template;
 
 class IndexController extends Template{
 
 	public function index(){
 
+
+		$produtoModel = new Produto();
+
+		$this->view->dados = $produtoModel->getProduto();  
 		$this->getTemplate("index");
 
-		$connection = DB::getConection();
-		$produtoModel = new Produto($connection);
-
-		echo "<pre>";
-		print_r($produtoModel->getProduto());
-		echo "<pre/>";
 	}
 
 	public function sobre_nos(){
 
-		$this->getTemplate("sobre_nos");
+		$infoModel = new Info();
 
-		$connection = DB::getConection();
-		$infoModel = new Info($connection);
-		echo "<pre>";
-		print_r($infoModel->getInfo());
-		echo "<pre/>";
+		$this->view->dados = $infoModel->getInfo();  
+
+		$this->getTemplate("sobre_nos");
 
 	}
 }

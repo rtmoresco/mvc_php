@@ -1,15 +1,10 @@
 <?php
 namespace Raiz\Model;
 
+use system\database\ConnectionSupport;
 
+class Info extends ConnectionSupport{
 
-class Info{
-
-	private $dbConection;
-
-	public function __construct(\PDO $dbConection){
-		$this->dbConection = $dbConection;
-	}
 
 	public function getInfo(){
 		$query = "select id, descricao, titulo from tb_info";

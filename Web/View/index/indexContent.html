@@ -1,3 +1,15 @@
 <section>
-	Meu Conteúdo Index
+	<?php 
+		foreach($this->view->dados as $index => $produto){		
+	?>
+			<h1><?=$produto["id"]?></h1>
+			<br>
+			<h1><?=$produto["descricao"]?></h1>
+			<br>
+			<h1><?=$produto["preco"]?></h1>
+			<br>
+			<hr>
+	<?php
+		}
+	?>
 </section>

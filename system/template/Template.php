@@ -1,14 +1,24 @@
 <?php
 namespace system\template;
 
+use system\database\DB;
+
 abstract class Template{
 
-	private $view;
+	protected $view;
+	protected $connection;
+	
 	private $nameHeader = "header";
 	private $nameFooter = "footer";
 
+
 	public function __construct(){
-		$this->view = new \stdClass();
+		$this->view = $this->emptyClass();
+		$this->connection = DB::getConection();
+	}
+
+	private function emptyClass(){
+		return new \stdClass();
 	}
 
 	protected function getTemplate($content){
@@ -33,6 +43,8 @@ abstract class Template{
 
 		require_once "../Web/View/".$pathController."/".$content."Content.html";
 	}
+
+
 
 	
 }	

@@ -1,3 +1,17 @@
 <section>
-	Meu conteudo Sobre nos
+
+	<?php 
+		foreach($this->view->dados as $index => $info){		
+	?>
+			<h1><?=$info["id"]?></h1>
+			<br>
+			<h1><?=$info["descricao"]?></h1>
+			<br>
+			<h1><?=$info["titulo"]?></h1>
+			<br>
+			<hr>
+	<?php
+		}
+	?>
+
 </section>
