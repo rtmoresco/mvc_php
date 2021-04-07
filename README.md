@@ -59,3 +59,5 @@ fará com que todos os arquivos HTML contidos no diretório index utilizem este 
   <li>Digitar o comando: php -S localhost:8080</li>
 </ul>
 
+<a href="https://img.shields.io/travis/php-v/rtmoresco/mvc_php/master"></a>
+
