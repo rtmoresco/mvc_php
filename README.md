@@ -59,5 +59,5 @@ fará com que todos os arquivos HTML contidos no diretório index utilizem este 
   <li>Digitar o comando: php -S localhost:8080</li>
 </ul>
 
-<img src="https://img.shields.io/static/v1?label=PHP&message=php >= 7.0&color=7159c1&style=for-the-badge&logo=php"/>
+<img src="https://img.shields.io/badge/PHP-php%20%3E%3D%207.0-green"/>
 
